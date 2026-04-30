@@ -44,14 +44,14 @@ public class P3_LongestSubstringWithoutRepeatingCharacters {
     }
 
 //    method 2
-public int lengthOfLongestSubstring2(String s) {
+    public int lengthOfLongestSubstring2(String s) {
 
-    int right = 0;
-    int left = 0;
-    int maxLength = 0;
-    Map<Character, Integer> charMap = new HashMap<>();
+        int right = 0;
+        int left = 0;
+        int maxLength = 0;
+        Map<Character, Integer> charMap = new HashMap<>();
 
-    while (right < s.length()){
+        while (right < s.length()){
 
         Character currentChar = s.charAt(right);
 
@@ -62,10 +62,10 @@ public int lengthOfLongestSubstring2(String s) {
         charMap.put(currentChar, right);
         right++;
         maxLength = Math.max(maxLength, right - left);
-    }
+        }
 
-    return maxLength;
-}
+        return maxLength;
+    }
 
     public static void main(String[] args) {
         P3_LongestSubstringWithoutRepeatingCharacters answer = new P3_LongestSubstringWithoutRepeatingCharacters();
