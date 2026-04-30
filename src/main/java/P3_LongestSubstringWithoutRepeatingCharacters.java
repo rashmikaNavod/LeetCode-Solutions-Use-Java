@@ -52,9 +52,7 @@ public class P3_LongestSubstringWithoutRepeatingCharacters {
         Map<Character, Integer> charMap = new HashMap<>();
 
         while (right < s.length()){
-
         Character currentChar = s.charAt(right);
-
         if(charMap.containsKey(currentChar)){
             left = Math.max(left, charMap.get(currentChar) + 1);
         }
